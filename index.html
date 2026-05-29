@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxmi Gupta - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(1, 1, 29);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(1, 1, 37);
+            padding: 0 5%;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s, font-size 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(164, 164, 243);
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 85vw;
+            margin: 60px auto;
+            gap: 40px;
+        }
+
+        .leftSection {
+            font-size: 2.8rem;
+            width: 55%;
+        }
+
+        
+        .leftSection .btn-container {
+            margin-top: 25px;
+        }
+
+        .rightSection {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .rightSection img {
+            max-width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+        }
+
+        .purple,
+        #element {
+            color: rgb(180, 136, 220);
+        }
+
+        main hr {
+            border: 0;
+            background-color: rgb(184, 151, 214);
+            height: 1px;
+            margin: 40px auto;
+            width: 85vw;
+        }
+
+        
+        .resume-btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background-color: rgb(180, 136, 220);
+            color: rgb(1, 1, 29);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(180, 136, 220, 0.2);
+        }
+
+        .resume-btn:hover {
+            background-color: rgb(150, 105, 190);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(180, 136, 220, 0.4);
+        }
+
+    
+        .secondSection {
+            max-width: 85vw;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .secondSection h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .secondSection .box {
+            font-size: 1.1rem;
+            color: rgb(238, 236, 239);
+            line-height: 1.7;
+        }
+
+        /* --- Skills Section --- */
+        .ThirdSection {
+            max-width: 85vw;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .ThirdSection h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        .ThirdSection .box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .ThirdSection .Vertical {
+            background-color: rgb(1, 1, 45);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid rgb(180, 136, 220);
+            transition: transform 0.3s;
+        }
+
+        .ThirdSection .Vertical:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-top {
+            width: 40px;
+            margin-bottom: 15px;
+        }
+
+        .Vertical-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .Vertical-desc {
+            color: #b3b3b3;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        
+        .fourthSection {
+            max-width: 85vw;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .fifthSection {
+            max-width: 85vw;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .fifthSection h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .first {
+            padding: 10px 0;
+        }
+
+        .first ul {
+            padding-left: 20px;
+        }
+
+        .first ul li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        
+        footer {
+            background-color: rgb(1, 1, 37);
+            padding: 50px 5% 20px 5%;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand h4 {
+            color: #a0a0a0;
+            font-weight: 400;
+        }
+
+        
+        .footer-brand .btn-container {
+            margin-top: 20px;
+        }
+
+        .footer-links h3,
+        .footer-third h3 {
+            margin-bottom: 15px;
+            color: rgb(180, 136, 220);
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul,
+        .footer-third ul {
+            list-style: none;
+        }
+
+        .footer-links ul li,
+        .footer-third ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a,
+        .footer-third ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links ul li a:hover,
+        .footer-third ul li a:hover {
+            color: rgb(164, 164, 243);
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: rgb(100, 105, 115);
+            margin-top: 40px;
+            border-top: 1px solid rgb(25, 25, 60);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        
+        @media (max-width: 968px) {
+            .firstSection {
+                flex-direction: column-reverse;
+                text-align: center;
+                margin: 40px auto;
+            }
+
+            .leftSection {
+                width: 100%;
+                font-size: 2.2rem;
+            }
+
+            .rightSection {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul li a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-brand h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Laxmi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Laxmi Gupta</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="btn-container">
+                    <a href="Laxmi_Gupta_CV.pdf" download="Laxmi_Gupta_CV.pdf" class="resume-btn">Download Resume</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="Analytics.png" alt="Analytics Visual">
+                <img src="bg1.png" alt="Background Element">
+            </div>
+        </section>
+        <hr>
+
+        <section class="secondSection" id="about">
+            <h1>About Me <img src="a2.png" alt=""></h1>
+            <div class="box">
+                <p>"Hi, I'm Laxmi Gupta, and I'm pursuing a Computer Science & Engineering undergraduate degree.
+                    I specialize in frontend web development and data analytics, blending creativity with logic to solve
+                    real-world problems.
+                    With a solid foundation in programming languages like Python and Java, alongside core web
+                    technologies like HTML, CSS, and JavaScript,
+                    I enjoy building responsive and interactive user interfaces. Additionally, my interest in Data
+                    Analytics and Power BI allows me to
+                    transform raw data into dynamic, meaningful visual stories and dashboards. I am always eager to
+                    learn, innovate, and contribute to impactful technological solutions."</p>
+            </div>
+        </section>
+        <hr>
+
+        <section class="ThirdSection" id="skills">
+            <h1>Skills <img src="s1.png" alt=""></h1>
+            <div class="box">
+                <div class="Vertical">
+                    <img class="image-top" src="bg1.png" alt="Web Dev Icon">
+                    <div class="Vertical-title">Web Development</div>
+                    <div class="Vertical-desc">HTML5, CSS3, JavaScript.</div>
+                </div>
+                <div class="Vertical">
+                    <img class="image-top" src="a1.png" alt="Data Analytics Icon">
+                    <div class="Vertical-title">Data Analytics & DB</div>
+                    <div class="Vertical-desc">Power BI, MySQL, Power Query, DAX.</div>
+                </div>
+                <div class="Vertical">
+                    <img class="image-top" src="p2.png" alt="Programming Icon">
+                    <div class="Vertical-title">Programming</div>
+                    <div class="Vertical-desc">Python, Java, C, C++.</div>
+                </div>
+                <div class="Vertical">
+                    <img class="image-top" src="t1.png" alt="Tools Icon">
+                    <div class="Vertical-title">Tools & Platforms</div>
+                    <div class="Vertical-desc">Git & GitHub, VS Code.</div>
+                </div>
+                <div class="Vertical">
+                    <img class="image-top" src="d1.png" alt="CS Concepts Icon">
+                    <div class="Vertical-title">Core CS Concepts</div>
+                    <div class="Vertical-desc">DSA, OOPs, DBMS, Operating Systems.</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        
+        <section class="fourthSection" id="projects">
+            <h1>Projects <img src="p1.png" alt=""></h1>
+            <br>
+            <h2>Project 1: Personal Portfolio Website (Ongoing)</h2><br>
+            <div>
+                Tech Stack: HTML5, CSS3, JavaScript
+                <br>
+                Description: A custom-built digital space designed to showcase my journey,
+                project repository, and technical skill set. I engineered this site with a
+                heavy emphasis on responsive UI layout styling to ensure a seamless viewer
+                experience across mobile, tablet, and desktop screens. Implemented custom JavaScript
+                to handle interactive elements and smooth transition animations.
+            </div><br><br>
+            <h2>Project 2: Data Analysis & Interactive Dashboards</h2><br>
+            <div>
+                Tech Stack: Microsoft Power BI, Power Query, DAX, Excel<br>
+                Description: Transformed raw, disorganized datasets into actionable corporate insights.
+                Using Power Query, I handled comprehensive data extraction, cleaning, and transformation
+                pipelines. Leveraging DAX formulas, I engineered complex data models and metrics to construct
+                dynamic, multi-view visual reports that dramatically improve tracking efficiency and decision-making
+                workflows.
+            </div>
+        </section>
+        <hr>
+        
+        <section class="fifthSection" id="certifications">
+            <h1>Certifications <img src="c2.png" alt=""></h1><br>
+            <div class="first">
+                <ul>
+                    <li>Gen AI Powered Data Analysis (TATA)</li>
+                    <li>Data Visualisation (TATA)</li>
+                    <li>Exploring Artificial Intelligence (IBM)</li>
+                    <li>Digital Data Gathering, Analysis and Presentation (IBM)</li>
+                    <li>Power BI Intern (Cognifyz)</li>
+                    <li>Web Development (Apex Planet)</li>
+                    <li>Frontend Development-HTML (Great Learning)</li>
+                    <li>TCS ion Career edge (TCS ion)</li>
+                    <li>C Programming (RCPL)</li>
+                    <li>Python Programming (RCPL)</li>
+                    <li>Java Programming (RCPL)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h1>Contact Me <img src="c3.png" alt=""></h1>
+                <h4>Laxmi's Portfolio</h4>
+                <div class="btn-container">
+                    <a href="Laxmi_Gupta_CV.pdf" download="Laxmi_Gupta_CV.pdf" class="resume-btn">Download Resume</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-third">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/laxmi-gupta-8ab430298" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/Laxmi19-creator" target="_blank">GitHub</a></li>
+                    <li><a href="mailto:guptalaxmi9616@gmail.com">Gmail</a></li>
+                    <li><a href="#">&#128222; +91 9628849320</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            &copy; Laxmi'sportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Data Analyst', 'Web Developer', 'AI Explorer'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
